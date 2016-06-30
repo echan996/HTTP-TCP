@@ -1,0 +1,46 @@
+Server:
+
+3 way handshake
+
+While true
+	
+	check ACKs for retrasmit
+	//tentatively do messy timeouts
+	receive from socket
+	
+	if socket is not empty, process socket information
+	else continue
+	
+	check window size
+	
+		if under window size
+			send packet
+		else continue
+
+
+Client:
+
+3 way handshake
+
+while true
+	
+	receive packets from socket; block until packet is received. 
+	if last packet, break out of while loop
+	
+	update window and ACK information
+	
+	send ack
+	
+	
+	
+	
+Incremental dev
+1. have server send everything & not care about reply. 
+2. have client reply with ACKS.
+3. have server acknowledge ACKS.
+4. implement server window and client window. 
+5. implement retransmit.
+
+	
+	
+	
