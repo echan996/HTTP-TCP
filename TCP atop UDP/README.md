@@ -16,3 +16,6 @@ The code was tested on Vagrant inside of a VM. The client and server VMs are con
 Client's IP is 10.0.0.2
 Server's IP is 10.0.0.3
 
+## Known Errors
+---
+- Client is unable to transfer multiple GB sized files. Error is most likely a result of integer overflow somewhere.
